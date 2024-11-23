@@ -1,0 +1,11 @@
+---
+- name: Installation of Java
+  hosts: webserver
+  become: yes
+  become_user: root
+  become_method: sudo
+  tasks:
+    - name: Installation of Java
+      dnf:
+        name: java
+        state: present
